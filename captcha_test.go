@@ -4,8 +4,9 @@ import (
 	"testing"
 )
 
-func TestOperator_whenInputIs1_ItShouldBePlus(t *testing.T) {
-	placeholder := 0
+var placeholder = 0
+
+func TestOperator_whenInputIs1_itShouldBePlus(t *testing.T) {
 	c := New(placeholder, placeholder, 1, placeholder)
 
 	o := c.getOperator()
@@ -15,8 +16,7 @@ func TestOperator_whenInputIs1_ItShouldBePlus(t *testing.T) {
 	}
 }
 
-func TestOperator_whenInputIs2_ItShouldBeMinus(t *testing.T) {
-	placeholder := 0
+func TestOperator_whenInputIs2_itShouldBeMinus(t *testing.T) {
 	c := New(placeholder, placeholder, 2, placeholder)
 
 	o := c.getOperator()
@@ -26,8 +26,7 @@ func TestOperator_whenInputIs2_ItShouldBeMinus(t *testing.T) {
 	}
 }
 
-func TestOperator_whenInputIs3_ItShouldBeDivide(t *testing.T) {
-	placeholder := 0
+func TestOperator_whenInputIs3_itShouldBeDivide(t *testing.T) {
 	c := New(placeholder, placeholder, 3, placeholder)
 
 	o := c.getOperator()
@@ -37,8 +36,7 @@ func TestOperator_whenInputIs3_ItShouldBeDivide(t *testing.T) {
 	}
 }
 
-func TestLeftOperand_WhenPatternIs1_ItShouldReturnNumber(t *testing.T) {
-	placeholder := 0
+func TestLeftOperand_whenPatternIs1AndLeftOperandIs2_itShouldReturnString2(t *testing.T) {
 	leftOperand := 2
 	captcha := New(1, leftOperand, placeholder, placeholder)
 

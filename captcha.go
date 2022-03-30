@@ -1,12 +1,14 @@
 package captcha
 
 type Captcha struct {
-	operator int
+	leftOperand int
+	operator    int
 }
 
 func New(pattern int, leftOperand int, operator int, rightOperand int) Captcha {
 	return Captcha{
-		operator: operator,
+		leftOperand: leftOperand,
+		operator:    operator,
 	}
 }
 
@@ -21,5 +23,8 @@ func (c Captcha) getOperator() string {
 }
 
 func (c Captcha) getLeftOperand() string {
+	if c.leftOperand == 1 {
+		return "1"
+	}
 	return "2"
 }

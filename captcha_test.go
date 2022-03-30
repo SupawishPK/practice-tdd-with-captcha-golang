@@ -36,6 +36,17 @@ func TestOperator_whenInputIs3_itShouldBeDivide(t *testing.T) {
 	}
 }
 
+func TestLeftOperand_whenPatternIs1AndLeftOperandIs1_itShouldReturnString1(t *testing.T) {
+	leftOperand := 1
+	captcha := New(1, leftOperand, placeholder, placeholder)
+
+	l := captcha.getLeftOperand()
+
+	if l != "1" {
+		t.Errorf("expected 1 but got %v", l)
+	}
+}
+
 func TestLeftOperand_whenPatternIs1AndLeftOperandIs2_itShouldReturnString2(t *testing.T) {
 	leftOperand := 2
 	captcha := New(1, leftOperand, placeholder, placeholder)

@@ -19,3 +19,7 @@ func (c Captcha) getOperator() string {
 	}
 	return "-"
 }
+
+func (c Captcha) getLeftOperand() string {
+	return "2"
+}

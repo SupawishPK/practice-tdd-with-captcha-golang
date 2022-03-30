@@ -25,3 +25,14 @@ func TestOperator_whenInputIs2_ItShouldBeMinus(t *testing.T) {
 		t.Errorf("expected - but get %v", o)
 	}
 }
+
+func TestOperator_whenInputIs3_ItShouldBeDivide(t *testing.T) {
+	placeholder := 0
+	c := New(placeholder, placeholder, 3, placeholder)
+
+	o := c.getOperator()
+
+	if o != "/" {
+		t.Errorf("expected / but got %v", o)
+	}
+}

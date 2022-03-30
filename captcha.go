@@ -14,5 +14,8 @@ func (c Captcha) getOperator() string {
 	if c.operator == 1 {
 		return "+"
 	}
+	if c.operator == 3 {
+		return "/"
+	}
 	return "-"
 }

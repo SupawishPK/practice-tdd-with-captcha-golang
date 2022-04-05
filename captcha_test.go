@@ -37,8 +37,7 @@ func TestOperator_whenInputIs3_itShouldBeDivide(t *testing.T) {
 }
 
 func TestLeftOperand_whenPatternIs1AndLeftOperandIs1_itShouldReturnString1(t *testing.T) {
-	leftOperand := 1
-	captcha := New(1, leftOperand, placeholder, placeholder)
+	captcha := New(1, 1, placeholder, placeholder)
 
 	l := captcha.getLeftOperand()
 
@@ -48,8 +47,7 @@ func TestLeftOperand_whenPatternIs1AndLeftOperandIs1_itShouldReturnString1(t *te
 }
 
 func TestLeftOperand_whenPatternIs1AndLeftOperandIs2_itShouldReturnString2(t *testing.T) {
-	leftOperand := 2
-	captcha := New(1, leftOperand, placeholder, placeholder)
+	captcha := New(1, 2, placeholder, placeholder)
 
 	l := captcha.getLeftOperand()
 
@@ -59,8 +57,7 @@ func TestLeftOperand_whenPatternIs1AndLeftOperandIs2_itShouldReturnString2(t *te
 }
 
 func TestLeftOperand_whenPatternIs1AndLeftOperandIs9_itShouldReturnString9(t *testing.T) {
-	leftOperand := 9
-	captcha := New(1, leftOperand, placeholder, placeholder)
+	captcha := New(1, 9, placeholder, placeholder)
 
 	l := captcha.getLeftOperand()
 

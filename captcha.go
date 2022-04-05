@@ -1,5 +1,7 @@
 package captcha
 
+import "strconv"
+
 type Captcha struct {
 	leftOperand int
 	operator    int
@@ -23,14 +25,5 @@ func (c Captcha) getOperator() string {
 }
 
 func (c Captcha) getLeftOperand() string {
-	if c.leftOperand == 8 {
-		return "8"
-	}
-	if c.leftOperand == 1 {
-		return "1"
-	}
-	if c.leftOperand == 9 {
-		return "9"
-	}
-	return "2"
+	return strconv.Itoa(c.leftOperand)
 }

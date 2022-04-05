@@ -26,5 +26,8 @@ func (c Captcha) getLeftOperand() string {
 	if c.leftOperand == 1 {
 		return "1"
 	}
+	if c.leftOperand == 9 {
+		return "9"
+	}
 	return "2"
 }

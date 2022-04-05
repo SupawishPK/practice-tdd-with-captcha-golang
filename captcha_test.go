@@ -57,3 +57,14 @@ func TestLeftOperand_whenPatternIs1AndLeftOperandIs2_itShouldReturnString2(t *te
 		t.Errorf("expected 2 but got %v", l)
 	}
 }
+
+func TestLeftOperand_whenPatternIs1AndLeftOperandIs9_itShouldReturnString9(t *testing.T) {
+	leftOperand := 9
+	captcha := New(1, leftOperand, placeholder, placeholder)
+
+	l := captcha.getLeftOperand()
+
+	if l != "9" {
+		t.Errorf("expected 9 but got %v", l)
+	}
+}

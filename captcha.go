@@ -4,8 +4,8 @@ import "strconv"
 
 type Captcha struct {
 	pattern     int
-	operator    int
 	leftOperand int
+	operator    int
 }
 
 func New(pattern int, leftOperand int, operator int, rightOperand int) Captcha {

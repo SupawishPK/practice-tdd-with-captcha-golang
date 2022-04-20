@@ -29,16 +29,7 @@ func (c Captcha) getOperator() string {
 func (c Captcha) getLeftOperand() string {
 	if c.pattern == 2 {
 		numbers := []string{"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"}
-		if c.leftOperand == 8 {
-			return numbers[8-1]
-		}
-		if c.leftOperand == 9 {
-			return numbers[9-1]
-		}
-		if c.leftOperand == 2 {
-			return "Two"
-		}
-		return "One"
+		return numbers[c.leftOperand-1]
 	}
 	return strconv.Itoa(c.leftOperand)
 }

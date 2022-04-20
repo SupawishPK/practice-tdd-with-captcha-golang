@@ -33,7 +33,7 @@ func (c Captcha) getLeftOperand() string {
 			return numbers[8-1]
 		}
 		if c.leftOperand == 9 {
-			return "Nine"
+			return numbers[9-1]
 		}
 		if c.leftOperand == 2 {
 			return "Two"

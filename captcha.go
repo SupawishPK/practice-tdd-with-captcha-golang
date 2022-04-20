@@ -28,6 +28,9 @@ func (c Captcha) getOperator() string {
 
 func (c Captcha) getLeftOperand() string {
 	if c.pattern == 2 {
+		if c.leftOperand == 9 {
+			return "Nine"
+		}
 		if c.leftOperand == 2 {
 			return "Two"
 		}

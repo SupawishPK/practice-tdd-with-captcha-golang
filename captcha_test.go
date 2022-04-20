@@ -88,4 +88,10 @@ func TestLeftOperand_whenPatternIs2AndLeftOperandIs9_itShouldReturnStringNine(t 
 	assert.Equal(t, "Nine", l)
 }
 
+func TestLeftOperand_whenPatternIs2AndLefOperandIs8_itShouldReturnStringEight(t *testing.T) {
+	c := New(2, 8, placeholder, placeholder)
 
+	l := c.getLeftOperand()
+
+	assert.Equal(t, "Eight", l)
+}

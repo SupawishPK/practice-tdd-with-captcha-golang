@@ -37,6 +37,9 @@ func (c Captcha) getLeftOperand() string {
 }
 
 func (c Captcha) RightOperand() string {
+	if c.pattern == 2 {
+		return strconv.Itoa(c.rightOperand)
+	}
 	so := StringOperand{value: c.rightOperand}
 	return so.result()
 }

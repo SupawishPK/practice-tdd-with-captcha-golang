@@ -103,3 +103,11 @@ func TestRightOperand_whenPatternIs1_andRightOperandIs1_itShouldReturnOne(t *tes
 
 	assert.Equal(t, "One", r)
 }
+
+func TestRightOperand_whenPatternIs2_andRightOperandIs1_itShouldReturn1(t *testing.T) {
+	c := New(2, placeholder, placeholder, 1)
+
+	r := c.RightOperand()
+
+	assert.Equal(t, "1", r)
+}

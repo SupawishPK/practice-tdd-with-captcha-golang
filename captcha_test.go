@@ -96,7 +96,7 @@ func TestLeftOperand_whenPatternIs2AndLefOperandIs8_itShouldReturnStringEight(t 
 	assert.Equal(t, "Eight", l)
 }
 
-func TestRightOperand_whenPatternIs1_andLeftOperandIs1_itShouldReturn1(t *testing.T) {
+func TestRightOperand_whenPatternIs1_andRightOperandIs1_itShouldReturnOne(t *testing.T) {
 	c := New(1, placeholder, placeholder, 1)
 
 	r := c.RightOperand()

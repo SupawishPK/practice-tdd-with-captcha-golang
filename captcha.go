@@ -37,6 +37,6 @@ func (c Captcha) getLeftOperand() string {
 }
 
 func (c Captcha) RightOperand() string {
-	numbers := []string{"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"}
-	return numbers[c.rightOperand-1]
+	so := StringOperand{value: c.rightOperand}
+	return so.result()
 }
